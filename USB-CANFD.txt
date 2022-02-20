@@ -1,0 +1,72 @@
+Configuration	USB-CANFD.ioc
+STM32CubeMX 	5.3.0
+Date	10/24/2020
+MCU	STM32G473CCTx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+RCC	Crystal/Ceramic Resonator	RCC_OSC_IN	PF0-OSC_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC_OUT	PF1-OSC_OUT
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+SYS	Dead Battery Signals disabled	SYS_VS_DBSignals	VP_SYS_VS_DBSignals
+USB	Device (FS)	USB_DM	PA11
+USB	Device (FS)	USB_DP	PA12
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+5	PF0-OSC_IN	RCC_OSC_IN	
+6	PF1-OSC_OUT	RCC_OSC_OUT	
+33	PA11	USB_DM	
+34	PA12	USB_DP	
+37	PA13	SYS_JTMS-SWDIO	
+38	PA14	SYS_JTCK-SWCLK	
+PERIPHERALS	MODES	FUNCTIONS	PINS
+RCC	Crystal/Ceramic Resonator	RCC_OSC_IN	PF0-OSC_IN
+RCC	Crystal/Ceramic Resonator	RCC_OSC_OUT	PF1-OSC_OUT
+SYS	Serial Wire	SYS_JTCK-SWCLK	PA14
+SYS	Serial Wire	SYS_JTMS-SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+SYS	Dead Battery Signals disabled	SYS_VS_DBSignals	VP_SYS_VS_DBSignals
+USB	Device (FS)	USB_DM	PA11
+USB	Device (FS)	USB_DP	PA12
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+5	PF0-OSC_IN	RCC_OSC_IN	
+6	PF1-OSC_OUT	RCC_OSC_OUT	
+33	PA11	USB_DM	
+34	PA12	USB_DP	
+37	PA13	SYS_JTMS-SWDIO	
+38	PA14	SYS_JTCK-SWCLK	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : USB-CANFD
+Project Folder : F:\Users\lilei\Documents\USB-CANFD
+Toolchain / IDE : EWARM V8
+Firmware Package Name and Version : STM32Cube FW_G4 V1.1.0
+
+
+Code Generation Settings : 
+STM32Cube MCU packages and embedded software packs : Copy all used libraries into the project folder
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : 
+
+
+
+
+
