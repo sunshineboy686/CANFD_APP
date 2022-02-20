@@ -1,0 +1,139 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sunshine 328186935@qq.com, company, LIC=UJWP0-BCUAI-HLSCL-0B0CP-BBKK4-H3ESL
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  D:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.40.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+E:\code\usb_device\USB-CANFD\MDK-ARM\USB-CANFD.uvprojx
+Project File Date:  01/03/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'USB-CANFD'
+compiling driver_ucan.c...
+../Inc/driver_ucan.h(108): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  extern _CANSetPara Can2SetPataInfo = NULL;
+../Inc/driver_ucan.h(109): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  extern _CANSetPara Can3SetPataInfo = NULL;
+..\Src\driver_ucan.c(23): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  _CANPara  Can2Para=NULL;
+..\Src\driver_ucan.c(24): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  _CANPara  Can3Para=NULL;
+..\Src\driver_ucan.c(25): error:  #148: variable "Can2SetPataInfo"  has already been initialized
+  _CANSetPara Can2SetPataInfo = NULL;
+..\Src\driver_ucan.c(25): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  _CANSetPara Can2SetPataInfo = NULL;
+..\Src\driver_ucan.c(26): error:  #148: variable "Can3SetPataInfo"  has already been initialized
+  _CANSetPara Can3SetPataInfo = NULL;
+..\Src\driver_ucan.c(26): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  _CANSetPara Can3SetPataInfo = NULL;
+..\Src\driver_ucan.c(35): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  FDCAN_HandleTypeDef hfdcan2=NULL;
+..\Src\driver_ucan.c(36): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  FDCAN_HandleTypeDef hfdcan3=NULL;
+..\Src\driver_ucan.c(37): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  FDCAN_FilterTypeDef sFilterConfig=NULL;
+..\Src\driver_ucan.c(38): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  FDCAN_TxHeaderTypeDef TxHeader2=NULL;
+..\Src\driver_ucan.c(39): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  FDCAN_TxHeaderTypeDef TxHeader3=NULL;
+..\Src\driver_ucan.c(40): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  FDCAN_RxHeaderTypeDef RxHeader=NULL;
+..\Src\driver_ucan.c(235): warning:  #940-D: missing return statement at end of non-void function "MX_CAN2_Init" 
+  }
+..\Src\driver_ucan.c(96): warning:  #177-D: variable "CAN2SetFlag"  was declared but never referenced
+  	uint8_t CAN2SetFlag=0;
+..\Src\driver_ucan.c(398): error:  #65: expected a ";"
+  		FDCANInit->DataPrescaler = dataPrescaler;
+..\Src\driver_ucan.c(240): warning:  #550-D: variable "dataPrescaler"  was set but never used
+  	 uint32_t dataPrescaler; 
+..\Src\driver_ucan.c(476): warning:  #177-D: variable "result"  was declared but never referenced
+  	int result=0;
+..\Src\driver_ucan.c(683): warning:  #223-D: function "Usb_Pro_Pack" declared implicitly
+     Usb_Pro_Pack(0x0801,RCanDataBuf,index);
+..\Src\driver_ucan.c(760): warning:  #223-D: function "Usb_Pro_Pack" declared implicitly
+     Usb_Pro_Pack(0x0802,RCanDataBuf,index);
+..\Src\driver_ucan.c: 18 warnings, 3 errors
+compiling usb_data.c...
+../Inc/driver_ucan.h(108): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  extern _CANSetPara Can2SetPataInfo = NULL;
+../Inc/driver_ucan.h(109): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  extern _CANSetPara Can3SetPataInfo = NULL;
+../Inc/inter_flash.h(28): warning:  #47-D: incompatible redefinition of macro "ADDR_FLASH_PAGE_0"  (declared at line 35 of "../Inc/usb_data.h")
+  #define ADDR_FLASH_PAGE_0			((uint32_t)0x08000000) /* Base @ of Page 0, 2 Kbyte */
+..\Src\usb_data.c(65): warning:  #177-D: variable "getIndex"  was declared but never referenced
+  	uint16_t getIndex=0;
+..\Src\usb_data.c(188): warning:  #111-D: statement is unreachable
+  			MyPrintf("recive cmd:%04X\r\n",TProData.cmd);
+..\Src\usb_data.c(309): error:  #65: expected a ";"
+  								case 4:
+..\Src\usb_data.c(311): warning:  #111-D: statement is unreachable
+  									break;
+..\Src\usb_data.c(326): error:  #167: argument of type "_CANSetPara" is incompatible with parameter of type "_CANPara"
+  						 	TTbuf[0]=MX_CAN2_Init(Can2SetPataInfo);
+..\Src\usb_data.c(340): error:  #167: argument of type "_CANSetPara" is incompatible with parameter of type "_CANPara"
+  						 	TTbuf[0]=MX_CAN3_Init(Can3SetPataInfo);
+..\Src\usb_data.c(718): warning:  #1-D: last line of file ends without a newline
+  }
+..\Src\usb_data.c: 7 warnings, 3 errors
+compiling main.c...
+../Inc/driver_ucan.h(108): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  extern _CANSetPara Can2SetPataInfo = NULL;
+../Inc/driver_ucan.h(109): warning:  #520-D: initialization with "{...}" expected for aggregate object
+  extern _CANSetPara Can3SetPataInfo = NULL;
+../Inc/inter_flash.h(28): warning:  #47-D: incompatible redefinition of macro "ADDR_FLASH_PAGE_0"  (declared at line 35 of "../Inc/usb_data.h")
+  #define ADDR_FLASH_PAGE_0			((uint32_t)0x08000000) /* Base @ of Page 0, 2 Kbyte */
+../Src/main.c(457): warning:  #177-D: function "MX_USART1_Init"  was declared but never referenced
+  static void MX_USART1_Init(void)
+../Src/main.c(505): warning:  #177-D: function "MX_USART2_Init"  was declared but never referenced
+  static void MX_USART2_Init(void)
+../Src/main.c(371): warning:  #177-D: function "MX_FDCAN2_Init"  was declared but never referenced
+  static void MX_FDCAN2_Init(void)
+../Src/main.c(414): warning:  #177-D: function "MX_FDCAN3_Init"  was declared but never referenced
+  static void MX_FDCAN3_Init(void)
+../Src/main.c: 7 warnings, 0 errors
+"USB-CANFD\USB-CANFD.axf" - 6 Error(s), 32 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32G4xx_DFP.1.4.0.pack
+                Keil.STM32G4xx_DFP.1.4.0
+                STMicroelectronics STM32G4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_USB-CANFD
+  D:\Users\32818\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  D:\Users\32818\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
